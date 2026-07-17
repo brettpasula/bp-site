@@ -1,5 +1,3 @@
-// Theme toggle — mirrors the old Angular ThemeService behavior:
-// saved preference wins, otherwise follow the OS.
 const STORAGE_KEY = "bp-theme";
 const root = document.documentElement;
 
