@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brett Pasula — Full-Stack Developer</title>
+  <meta name="description" content="Brett Pasula is a full-stack developer passionate about building software that makes an impact." />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Apply saved/preferred theme before first paint to avoid a flash.
+    (function () {
+      var saved = localStorage.getItem("bp-theme");
+      var dark = saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+      if (dark) document.documentElement.classList.add("dark");
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <a class="brand" href="#top">BP</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="12" y1="2" x2="12" y2="4.5"/><line x1="12" y1="19.5" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="4.5" y2="12"/><line x1="19.5" y1="12" x2="22" y2="12"/>
+              <line x1="4.9" y1="4.9" x2="6.7" y2="6.7"/><line x1="17.3" y1="17.3" x2="19.1" y2="19.1"/>
+              <line x1="4.9" y1="19.1" x2="6.7" y2="17.3"/><line x1="17.3" y1="6.7" x2="19.1" y2="4.9"/>
+            </g>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <svg class="hero-topo" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M-20 520 C 150 460, 260 560, 430 500 S 720 420, 920 480"/>
+          <path d="M-20 470 C 140 400, 280 500, 450 440 S 700 350, 920 410"/>
+          <path d="M-20 420 C 130 340, 300 440, 470 380 S 690 290, 920 340"/>
+          <path d="M-20 370 C 120 280, 320 380, 490 320 S 680 230, 920 270"/>
+          <path d="M-20 320 C 110 230, 340 320, 500 260 S 670 170, 920 210"/>
+          <path d="M-20 270 C 100 180, 350 260, 510 210 S 660 120, 920 150"/>
+          <path d="M-20 220 C 90 140, 360 210, 520 160 S 650 80, 920 100"/>
+        </g>
+      </svg>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Hello, I’m</p>
+        <h1 class="hero-name">Brett Pasula</h1>
+        <p class="hero-description">
+          Full-stack developer passionate about building software that makes an impact.
+        </p>
+        <div class="hero-cta">
+          <a class="button button-solid" href="#about">About me</a>
+          <a class="button" href="#gallery">Gallery</a>
+          <a class="button" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2><span class="section-number">01</span> About</h2>
+
+      <h3>Technical</h3>
+      <ul class="tags">
+        <li>Full Stack</li>
+        <li>Enterprise Systems</li>
+        <li>System Architecture</li>
+        <li>Cloud Platforms</li>
+        <li>AI-Assisted Development</li>
+      </ul>
+
+      <h3>Leadership</h3>
+      <ul class="tags">
+        <li>Team Leadership</li>
+        <li>Technical Strategy</li>
+        <li>Product Thinking</li>
+        <li>Mentorship</li>
+        <li>Engineering Excellence</li>
+      </ul>
+
+      <h3>Personal Interests</h3>
+      <ul class="tags">
+        <li>Golf</li>
+        <li>Gardening</li>
+        <li>Geology</li>
+        <li>Travel</li>
+      </ul>
+
+      <h3>Education</h3>
+      <details>
+        <summary>
+          <span class="edu-title">Master of Business Administration</span>
+          <span class="edu-meta">Simon Fraser University · Expected 2026</span>
+        </summary>
+        <p>
+          The MBA program at Simon Fraser University’s Beedie School of Business
+          complements my technical background with deeper expertise in
+          leadership, strategy, finance, and operations.
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="edu-title">Bachelor of Computer Science</span>
+          <span class="edu-meta">University of British Columbia · 2021</span>
+        </summary>
+        <p>
+          An introductory programming course I took as part of my former studies
+          initiated my interest in computer programming. In the fall of 2018 I
+          returned to UBC to complete my Bachelor of Computer Science. As part
+          of my BCS degree I completed a co-op term and courses on algorithms,
+          data structures, data visualization, hardware, machine learning,
+          networking and relational databases. I supplemented my degree with
+          additional business courses on financial and managerial accounting,
+          entrepreneurship, ethics, and processes and operations.
+        </p>
+      </details>
+      <details>
+        <summary>
+          <span class="edu-title">Bachelor of Science, Geology</span>
+          <span class="edu-meta">University of British Columbia · 2018</span>
+        </summary>
+        <p>
+          I moved to the west coast of Canada in the early 2010’s to attend the
+          University of British Columbia (UBC) and play on the Thunderbirds golf
+          team. I graduated with a Bachelor of Science in Geology with
+          Distinction in 2018. As part of my studies I completed courses on
+          geochemistry, geomorphology, GIS, groundwater hydrology, igneous,
+          metamorphic and sedimentary petrology, soils, statistics, structural
+          geology, and volcanology. I worked a summer season in northeast BC
+          assisting with a seismic survey (and back in the lab on off weeks),
+          and another season in the Golden Triangle working with a junior
+          exploration company.
+        </p>
+      </details>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2><span class="section-number">02</span> Gallery</h2>
+      <div class="photo-grid">
+        <figure>
+          <img src="assets/img/maui.jpg" alt="Coastal view in Maui" loading="lazy" width="1400" height="929" />
+          <figcaption>Maui, Hawaii</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/milan.jpg" alt="Architecture in Milan" loading="lazy" width="1400" height="1050" />
+          <figcaption>Milan, Italy</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/chalkidiki.jpg" alt="Coastline in Chalkidiki" loading="lazy" width="1400" height="1050" />
+          <figcaption>Chalkidiki, Greece</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/towerofhercules.jpg" alt="The Tower of Hercules" loading="lazy" width="1400" height="1050" />
+          <figcaption>Tower of Hercules, Spain</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2><span class="section-number">03</span> Contact</h2>
+      <div class="contact-links">
+        <a class="button button-solid" href="https://github.com/brettpasula" target="_blank" rel="noopener noreferrer" aria-label="Open my GitHub profile in a new tab">
+          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+          </svg>
+          GitHub
+        </a>
+        <a class="button button-solid" href="https://www.linkedin.com/in/brettpasula/" target="_blank" rel="noopener noreferrer" aria-label="Open my LinkedIn profile in a new tab">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0Z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Brett Pasula</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

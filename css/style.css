@@ -1,0 +1,350 @@
+/* ---------------------------------------------------------------------------
+   Brett Pasula — personal site
+   Earthy, typographic, zero dependencies. Light & dark via .dark on <html>.
+--------------------------------------------------------------------------- */
+
+:root {
+  --bg: #faf7f2;
+  --bg-raised: #ffffff;
+  --ink: #2b2620;
+  --ink-soft: #6b6156;
+  --line: #e3dcd2;
+  --accent: #a4552b;
+  --accent-ink: #fff6ef;
+  --topo: rgba(164, 85, 43, 0.18);
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    serif;
+}
+
+.dark {
+  --bg: #191512;
+  --bg-raised: #221d19;
+  --ink: #ede6dc;
+  --ink-soft: #a89c8e;
+  --line: #383028;
+  --accent: #d98d5f;
+  --accent-ink: #211307;
+  --topo: rgba(217, 141, 95, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Header ------------------------------------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+#theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+#theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Show moon in light mode (click for dark), sun in dark mode. */
+.icon-sun { display: none; }
+.icon-moon { display: block; }
+.dark .icon-sun { display: block; }
+.dark .icon-moon { display: none; }
+
+/* ---- Hero -------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 1.25rem 6rem;
+}
+
+.hero-topo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--topo);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.25rem;
+  color: var(--accent);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 8vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.hero-description {
+  max-width: 32rem;
+  margin: 1.25rem 0 2rem;
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* ---- Buttons ----------------------------------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.3rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.button:hover {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.button-solid {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.button-solid:hover {
+  background: color-mix(in srgb, var(--accent) 88%, var(--ink));
+}
+
+/* ---- Sections ---------------------------------------------------------- */
+
+.section {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 1rem;
+}
+
+.section h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  margin: 0 0 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-number {
+  color: var(--accent);
+  font-size: 1.1rem;
+  vertical-align: 0.35em;
+  margin-right: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.section h3 {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 2rem 0 0.75rem;
+}
+
+/* ---- Tags -------------------------------------------------------------- */
+
+.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags li {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--bg-raised);
+  font-size: 0.9rem;
+}
+
+/* ---- Education accordion ------------------------------------------------ */
+
+details {
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  background: var(--bg-raised);
+  margin-bottom: 0.75rem;
+}
+
+summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  margin-left: auto;
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+details[open] summary::after {
+  content: "–";
+}
+
+.edu-title {
+  font-weight: 600;
+}
+
+.edu-meta {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+details p {
+  margin: 0;
+  padding: 0 1.25rem 1.25rem;
+  color: var(--ink-soft);
+}
+
+/* ---- Gallery ------------------------------------------------------------ */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.photo-grid figure {
+  margin: 0;
+}
+
+.photo-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  border: 1px solid var(--line);
+}
+
+.photo-grid figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 40rem) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Contact & footer ---------------------------------------------------- */
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-footer {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 2rem;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
